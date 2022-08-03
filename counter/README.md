@@ -1,27 +1,11 @@
-# Counter
+## 1 - ilk olarak state klasöü içerisinde state.ts dosyası olusuturup içerisine state'in ilk değerini veriyoruz
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
+## 2 - action.ts dosyası olusturup içerisinde createAction() fonksiyonu ile action tanımlayıp içine action type yazıyoruz
 
-## Development server
+## 3 - reducer.ts dosyası olusturup createReducer() fonskiyonu ile reducer tanımlayıp içine ilk değer olan initialState'i veriyoruz sonra on() fonksiyonu ile ayrı ayrı her action için fonksiyon olusturup içinde state'in nasıl değişeceğini yazıyoruz
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 4 - app.module imports içerisine 'StoreModule.forRoot({ denemeStore: denemeReducer })' yazıp denemeStore adında bir store olusurduk ve reducer'ı verdik
 
-## Code scaffolding
+## 5 - state'i değiştireceğimiz component içerisine 'constructor(private store: Store<{ denemeStore: CounterState }>) { }' yazıp store'u inject ediyoruz. burada store adı ile constructor içerisnde yazdıgımız ad aynı olmalı. state değişkliği için ilgili metodun içine 'this.store.dispatch(actionAdı())' yazıyoruz dispatch() fonksiyornunun içine önceden tanımladıgımız action adını verdik.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 6 - state'i başka bir compenent'de çağırmak için yine constructor'a store inject ediyoruz sonrasında select() fonksiyonu ile store içinden state'i çekebiliriz. 'this.store.select('denemeStore').subcsribe()' yazıp ilgili store'a bona oldugunu yazıyourm ben state her değiştiğinde bu fonksiyon çalıaşacagı için ekrandaki değer anlık olarak değişmiş olacak.
