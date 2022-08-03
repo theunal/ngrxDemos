@@ -1,0 +1,23 @@
+<div class="container mt-5">
+
+    <form [formGroup]="loginForm" (ngSubmit)="login()" id="loginForm">
+        <div class="row">
+            <input class="form-control w-50 mb-2 mx-auto" placeholder="email" type="text" formControlName='email'>
+            <div *ngIf="formValidationError('email') !== ''" style="color: red; font-size: 15px;"
+                class="mb-3 text-center">{{
+                formValidationError('email')}}</div>
+        </div>
+
+        <div class="row">
+            <input class="form-control w-50 mb-2 mx-auto" placeholder="password" type="password"
+                formControlName='password'>
+            <div *ngIf="formValidationError('password') !== ''" style="color: red; font-size: 15px;"
+                class="mb-3 text-center">{{
+                formValidationError('password')}}</div>
+        </div>
+
+        <div class="row">
+            <button type="submit" class="btn btn-success w-50 mt-2 mx-auto">login</button>
+        </div>
+    </form>
+</div>
