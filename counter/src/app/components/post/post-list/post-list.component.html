@@ -9,6 +9,7 @@
                         <th>id</th>
                         <th>title</th>
                         <th>description</th>
+                        <th>actions</th>
                     </tr>
                 </thead>
 
@@ -17,6 +18,9 @@
                         <td>{{post.id}}</td>
                         <td>{{post.title}}</td>
                         <td>{{post.description}}</td>
+                        <td>
+                            <button class="btn btn-warning btn-sm" routerLink="/posts/update/{{post.id}}">update</button>
+                        </td>
                     </tr>
 
                 </tbody>
