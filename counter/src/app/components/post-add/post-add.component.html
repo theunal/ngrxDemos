@@ -1,0 +1,21 @@
+<div class="row mt-5">
+    <form [formGroup]='postForm' (ngSubmit)="addPost()" id="postForm">
+
+        <div>
+            <input class="form-control mb-2" placeholder="title" formControlName="title">
+            <div *ngIf="formValidationError('title') !== ''" style="color: red; font-size: 15px;" class="mb-3">{{
+                formValidationError('title')}}</div>
+        </div>
+
+
+        <div>
+            <textarea class="form-control mb-2" placeholder="description" formControlName="description"></textarea>
+            <div *ngIf="formValidationError('description') !== ''" style="color: red; font-size: 15px;" class="mb-3">{{
+                formValidationError('description')}}</div>
+        </div>
+
+
+
+        <button class="btn btn-success mt-2" type="submit">save</button>
+    </form>
+</div>
