@@ -18,8 +18,9 @@
                         <td>{{post.id}}</td>
                         <td>{{post.title}}</td>
                         <td>{{post.description}}</td>
-                        <td>
-                            <button class="btn btn-warning btn-sm" routerLink="/posts/update/{{post.id}}">update</button>
+                        <td class="text-center">
+                            <button class="btn btn-warning btn-sm mx-1" routerLink="/posts/update/{{post.id}}">update</button>
+                            <button class="btn btn-danger btn-sm mx-1" (click)="deletePost(post.id)">delete</button>
                         </td>
                     </tr>
 
