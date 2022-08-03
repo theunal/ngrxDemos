@@ -1,4 +1,8 @@
+<p class="mt-5 text-uppercase">{{selectorText | async}}</p>
+
+<button class="btn btn-info" (click)="changeText()">text değiştir</button>
 
 
 <input type="number" class="form-control w-25 mt-5" placeholder="enter the state" [(ngModel)]="inputValue">
+
 <button class="btn btn-success mt-1" (click)="customIncrement()">add to counter</button>

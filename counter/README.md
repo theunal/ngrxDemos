@@ -8,4 +8,6 @@
 
 ## 5 - state'i değiştireceğimiz component içerisine 'constructor(private store: Store<{ denemeStore: CounterState }>) { }' yazıp store'u inject ediyoruz. burada store adı ile constructor içerisnde yazdıgımız ad aynı olmalı. state değişkliği için ilgili metodun içine 'this.store.dispatch(actionAdı())' yazıyoruz dispatch() fonksiyornunun içine önceden tanımladıgımız action adını verdik.
 
-## 6 - state'i başka bir compenent'de çağırmak için yine constructor'a store inject ediyoruz sonrasında select() fonksiyonu ile store içinden state'i çekebiliriz. 'this.store.select('denemeStore').subcsribe()' yazıp ilgili store'a bona oldugunu yazıyourm ben state her değiştiğinde bu fonksiyon çalıaşacagı için ekrandaki değer anlık olarak değişmiş olacak.
+## 6 - state'i başka bir compenent'de çağırmak için yine constructor'a store inject ediyoruz sonrasında select() fonksiyonu ile store içinden state'i çekebiliriz. 'this.store.select('denemeStore').subcsribe()' yazıp ilgili store'a abone oldugunu yazıyourm ben state her değiştiğinde bu fonksiyon çalıaşacagı için ekrandaki değer anlık olarak değişmiş olacak.
+
+## 7 - selector.ts dosyası olusturup createFeatureSelector<storeType>('storeAdı') fonksiyonu içine state type giriyoruz ve store'un adını giriyoruz. createSelector() ile istediğimiz veri türünü return edebiliriz
