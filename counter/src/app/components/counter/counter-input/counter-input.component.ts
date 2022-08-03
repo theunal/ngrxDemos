@@ -1,10 +1,9 @@
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { changeText, customIncrement } from 'src/app/state/counter.actions';
-import { getText } from 'src/app/state/counter.selectors';
-import { CounterState } from 'src/app/state/counter.state';
+import { changeText, customIncrement } from 'src/app/state/counter/counter.actions';
 import { AppState } from 'src/app/store/app.state';
+import { getText } from 'src/app/state/counter/counter.selectors';
 
 @Component({
   selector: 'app-counter-input',

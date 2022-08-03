@@ -1,8 +1,8 @@
-import { CounterState } from './../../state/counter.state';
+
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { getCounter, getText } from 'src/app/state/counter.selectors';
+import { getCounter } from 'src/app/state/counter/counter.selectors';
 import { AppState } from 'src/app/store/app.state';
 
 @Component({

@@ -6,8 +6,7 @@ import { addPost } from 'src/app/state/post/post.action';
 
 @Component({
   selector: 'app-post-add',
-  templateUrl: './post-add.component.html',
-  styleUrls: ['./post-add.component.css']
+  templateUrl: './post-add.component.html'
 })
 export class PostAddComponent implements OnInit {
 

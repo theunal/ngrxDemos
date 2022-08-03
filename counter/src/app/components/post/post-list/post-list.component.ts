@@ -1,14 +1,13 @@
 import { Observable } from 'rxjs';
-import { AppState } from './../../store/app.state';
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Post } from 'src/app/state/post/post.state';
 import { getPosts } from 'src/app/state/post/post.selector';
+import { AppState } from 'src/app/store/app.state';
 
 @Component({
   selector: 'app-post-list',
-  templateUrl: './post-list.component.html',
-  styleUrls: ['./post-list.component.css']
+  templateUrl: './post-list.component.html'
 })
 export class PostListComponent implements OnInit {
 

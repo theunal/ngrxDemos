@@ -1,9 +1,10 @@
+import { PostAddComponent } from './components/post/post-add/post-add.component';
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CounterComponent } from './components/counter/counter.component';
 import { HomeComponent } from './components/home/home.component';
-import { PostAddComponent } from './components/post-add/post-add.component';
-import { PostListComponent } from './components/post-list/post-list.component';
+import { PostListComponent } from './components/post/post-list/post-list.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
